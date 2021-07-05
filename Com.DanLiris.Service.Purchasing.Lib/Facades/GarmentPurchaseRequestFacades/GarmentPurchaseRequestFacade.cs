@@ -1376,7 +1376,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Facades.GarmentPurchaseRequestFaca
                          });
             #endregion
 
-            TotalCountReport = Query.Distinct().OrderByDescending(o => o.PRDate).Count();
+            TotalCountReport = Query.Distinct().Count();
             var queryResult = Query.Distinct().OrderByDescending(o => o.PRDate).Skip((page - 1) * size).Take(size).ToList();
 
             var purchaseRequestIds = queryResult.Select(s => s.PRId).Distinct().ToList();
