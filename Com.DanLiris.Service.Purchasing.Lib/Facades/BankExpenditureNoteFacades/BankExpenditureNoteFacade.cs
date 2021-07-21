@@ -583,9 +583,9 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Facades.BankExpenditureNoteFacades
                              PaymentMethod = c.PaymentMethod,
                              UnitPaymentOrderNo = b.UnitPaymentOrderNo,
                              BankName = string.Concat(a.BankAccountName, " - ", a.BankName, " - ", a.BankAccountNumber, " - ", a.BankCurrencyCode),
-                             DPP = c.TotalPaid - c.Vat,
-                             VAT = c.Vat,
-                             TotalPaid = c.TotalPaid,
+                             DPP = b.TotalPaid  - b.Vat,
+                             VAT = b.Vat,
+                             TotalPaid = b.TotalPaid,
                              InvoiceNumber = c.InvoiceNo,
                              DivisionCode = c.DivisionCode
                          }
@@ -617,12 +617,12 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Facades.BankExpenditureNoteFacades
                              PaymentMethod = c.PaymentMethod,
                              UnitPaymentOrderNo = b.UnitPaymentOrderNo,
                              BankName = string.Concat(a.BankAccountName, " - ", a.BankName, " - ", a.BankAccountNumber, " - ", a.BankCurrencyCode),
-                             DPP = c.TotalPaid - c.Vat,
-                             VAT = c.Vat,
-                             TotalPaid = c.TotalPaid,
+                             DPP = b.TotalPaid - b.Vat,
+                             VAT = b.Vat,
+                             TotalPaid = b.TotalPaid,
                              InvoiceNumber = c.InvoiceNo,
                              DivisionCode = c.DivisionCode,
-                             TotalDPP = c.TotalPaid - c.Vat,
+                             TotalDPP = b.TotalPaid - b.Vat,
                              TotalPPN = c.Vat,
                          }
                       );
